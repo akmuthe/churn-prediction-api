@@ -1,0 +1,3 @@
+timestamp,tenure,monthly_charges,total_charges,contract,internet_service,tech_support,payment_method,prediction,churn_probability,latency_ms
+2026-06-30T11:35:46.273973,2,95.5,191.0,Month-to-month,Fiber optic,No,Electronic check,1,0.9836,8.76
+2026-06-30T11:36:26.155080,60,45.0,2700.0,Two year,DSL,Yes,Bank transfer,0,0.0020,4.41
