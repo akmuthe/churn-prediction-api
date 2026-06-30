@@ -28,6 +28,19 @@ encoders = joblib.load("encoders.pkl")
 feature_cols = joblib.load("feature_cols.pkl")
 
 
+@app.route("/", methods=["GET"])
+def home():
+    return jsonify({
+        "service": "Customer Churn Prediction API",
+        "status": "running",
+        "endpoints": {
+            "GET /health": "service health check",
+            "POST /predict": "predict churn for a customer (see README for request format)",
+            "GET /stats": "summary stats of predictions made so far"
+        }
+    })
+
+
 @app.route("/health", methods=["GET"])
 def health():
     return jsonify({"status": "ok", "model_loaded": True})
